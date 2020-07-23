@@ -1,12 +1,14 @@
 <template>
   <main class="list-apartments" role="main">
-    <template v-if="apartments.length">
+    <template v-if="apartments.length && !error">
 
       <Apartment v-for="apartment in apartments" :key="apartment.id" :apartment="apartment" />
 
     </template>
 
-    <template v-else>Some loading with interactive elements, mb use spin</template>
+    <template v-else-if="!apartments.length && !error">Some loading with interactive elements, mb use spin</template>
+
+    <template v-else-if="error">Упс, ошибка, попробуйте обновить страницу позже!</template>
   </main>
 </template>
 
@@ -19,11 +21,14 @@
     components: {Apartment},
     data() {
       return {
-        apartments: []
+        apartments: [],
+        error: false
       };
     },
     created() {
-      getApartments().then(res => this.apartments = res);
+      getApartments()
+              .then(res => this.apartments = res)
+              .catch(() => this.error = true);
     }
   }
 </script>
