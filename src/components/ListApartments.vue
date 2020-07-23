@@ -1,5 +1,5 @@
 <template>
-  <div class="list-apartments">
+  <main class="list-apartments" role="main">
     <template v-if="apartments.length">
 
       <Apartment v-for="apartment in apartments" :key="apartment.id" :apartment="apartment" />
@@ -7,7 +7,7 @@
     </template>
 
     <template v-else>Some loading with interactive elements, mb use spin</template>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -30,10 +30,6 @@
 
 <style lang="scss">
   .list-apartments {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
     display: flex;
   }
 </style>
