@@ -1,5 +1,5 @@
 <template>
-    <button class="like__button" @click="likeHandler" v-if="true">
+    <button :class="{ 'like': true, 'like--active': isAdded }" @click="likeHandler" v-if="true">
         {{ isAdded ? 'Удалить из закладок' : 'Добавить в закладки' }}
     </button>
 </template>
@@ -52,5 +52,24 @@
 
 <style lang="scss">
     .like {
+        border: 1px solid gray;
+        padding: 7px 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: #edffe0;
+        }
+        
+        &--active {
+            border-color: #009843;
+            
+            &:hover {
+                background-color: #ffd1d2;
+            }
+        }
     }
 </style>
