@@ -13,7 +13,7 @@
                 {{ apartment.relationships.attributes.first_name }}
                 {{ apartment.relationships.attributes.middle_name }}
             </div>
-
+            <Like :id="apartment.id" />
         </div>
     </article>
 </template>
@@ -21,12 +21,14 @@
 <script>
     import Address from '@/components/ApartmentAddress';
     import KeyData from '@/components/ApartmentKeyData';
+    import Like from '@/components/ApartmentLike';
 
     export default {
         name: 'Apartment',
         components: {
             Address,
-            KeyData
+            KeyData,
+            Like
         },
         props: {
             apartment: Object
