@@ -24,12 +24,14 @@
     // mb import normalize, there is no need for this project
     margin: 0;
     padding: 0;
+    font-family: Tahoma, sans-serif;
   }
 
   #app {
-    max-width: 1000px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    box-sizing: border-box;
   }
 </style>

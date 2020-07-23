@@ -6,7 +6,7 @@
 
     </template>
 
-    <template v-else-if="!apartments.length && !error">Some loading with interactive elements, mb use spin</template>
+    <template v-else-if="!apartments.length && !error">Загрузка...</template>
 
     <template v-else-if="error">Упс, ошибка, попробуйте обновить страницу позже!</template>
   </main>
@@ -35,6 +35,5 @@
 
 <style lang="scss">
   .list-apartments {
-    display: flex;
   }
 </style>
