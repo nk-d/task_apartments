@@ -13,7 +13,7 @@ const request = (options) => {
     return fetch(options.url, options)
         .then(response =>
             response.json().then(json => {
-                if(!response.ok) {
+                if(!json.response.length || !json.response) {
                     return Promise.reject([json, response.status]);
                 }
                 return json.response;
