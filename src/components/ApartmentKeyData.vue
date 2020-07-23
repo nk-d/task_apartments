@@ -35,9 +35,9 @@
             Rooms
         },
         props: {
-            area: String,
+            area: Number,
             unit: String,
-            rooms: String
+            rooms: Number
         }
     }
 </script>
