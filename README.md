@@ -1,17 +1,14 @@
-### Тестовое задание
+This project was bootstrapped with [Vue CLI](https://github.com/vuejs/vue-cli).
 
-Данное задание рассчитано на применение фреймворка - **vue**
+## Test task
 
-Задание рассчитано примерно на 4 часа.
+This task is intended for the use - **vue** framework.
 
-Задача:
+Make a page with apartment cards, the visual part is arbitrary. Add the "Like" icon to the apartment card. With the opportunity to mark the apartment you like.
 
-Сверстать страницу с карточками квартир, визуальная часть по желанию. На карточку квартиры добавить значок Like.
-С возможностью отметить понравившуюся квартиру.
+The layout should be adaptive. The data is displayed correctly on all resolutions and devices.
 
-Верстка должна быть адаптивной. Данные корректно отображаться на всех разрешениях и устройствах.
+To implement data acquisition for display by simulating data acquisition via the API.
 
-Получение данных для отображения реализовать при помощи имитации получения данных по API.
+It is assumed that the received data has the entities.json format.
 
-Условно считается что получаемые данные имеют формат entities.json
- 
